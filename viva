@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<string.h>
+
+
+char s1[10];
+int b[10];
+int equ(char c)
+{
+int i;
+ for( i=0;i<strlen(s1);i++)
+  {
+   if(c==s1[i])
+    return b[i];
+  }
+ return strlen(s1);
+}
+main()
+{
+char s[20];
+int p,i,q,z,count;
+printf("enter the input string\n");
+gets(s);
+printf("enter substring\n");
+gets(s1);
+p=strlen(s);
+q=r=strlen(s1);
+b[q-1]=q;
+for(i=0;i<q-1;i++)
+{
+ b[i]=q-i-1;
+}
+
+for(i=0;i<p;i++)
+{
+ if(s[q-1-i]==s1[r-1-i])
+ {
+ count++; if(count==strlen(s1))
+       break;
+else
+  continue;
+ }
+ else
+{
+  z= equ(s[q-i-1]);
+  q=q+z;
+}
+}
+if(count==strlen(s1))
+printf("the substring %s is present\n",s1);
+else
+printf("not present\n");
+                   }
